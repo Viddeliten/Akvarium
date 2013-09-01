@@ -1,0 +1,39 @@
+# Project: Akvarium
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = main.o thing.o plant.o akvarium.o $(RES)
+LINKOBJ  = main.o thing.o plant.o akvarium.o $(RES)
+LIBS =  -lalleg  
+INCS = 
+CXXINCS = 
+BIN  = Akvarium.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before Akvarium.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "Akvarium.exe" $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+thing.o: thing.c
+	$(CPP) -c thing.c -o thing.o $(CXXFLAGS)
+
+plant.o: plant.c
+	$(CPP) -c plant.c -o plant.o $(CXXFLAGS)
+
+akvarium.o: akvarium.c
+	$(CPP) -c akvarium.c -o akvarium.o $(CXXFLAGS)
