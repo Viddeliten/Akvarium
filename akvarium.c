@@ -154,7 +154,7 @@ void move_things(AKVARIUM **ak)
                          else if(pt->typ==3)
                          {
                              //växtätare äter gräs eller flyttar mot gräs eller från köttätare
-                             move_herbivore(ak, pt, x, y, z);
+                             move_vegan(ak, pt, x, y, z);
                          }
                          else if(pt->typ==4)
                          {
@@ -788,7 +788,7 @@ void move_carnivore(AKVARIUM **ak, thing *pt, int x, int y, int z)
      pt->dy+=((rand()%3)-1)*0.25;
 }
 
-void move_herbivore(AKVARIUM **ak, thing *pt, int x, int y, int z)
+void move_vegan(AKVARIUM **ak, thing *pt, int x, int y, int z)
 {
      int ez;
      int found;
@@ -1172,7 +1172,7 @@ void check_things(AKVARIUM **ak)
        if(found3<1)
        {
            //Skriv ut text
-           textprintf_centre_ex(bmp, font, s_w / 2, 120, makecol(0, 100, 243), -1,  "Creating new herbivores");        
+           textprintf_centre_ex(bmp, font, s_w / 2, 120, makecol(0, 100, 243), -1,  "Creating new vegans");        
            //rita ut bilden på skärmen
            blit(bmp, screen, 0, 0, 0, 0, s_w, s_h); 
            //Vänta på knapptryckning

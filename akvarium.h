@@ -14,7 +14,7 @@ void draw_things(AKVARIUM **ak);
 void move_thing(AKVARIUM **ak, thing **ppt, int x, int y, int z);
 void move_aseater(AKVARIUM **ak, thing *pt, int x, int y, int z);
 void move_carnivore(AKVARIUM **ak, thing *pt, int x, int y, int z);
-void move_herbivore(AKVARIUM **ak, thing *pt, int x, int y, int z);
+void move_vegan(AKVARIUM **ak, thing *pt, int x, int y, int z);
 void move_plant(AKVARIUM **ak, thing *pt, int x, int y, int z);
 void energy_in_creature(AKVARIUM **ak,thing *pt, int x, int y, int z);
 void make_poo(AKVARIUM **ak, thing *pt, int x, int y, int z);
